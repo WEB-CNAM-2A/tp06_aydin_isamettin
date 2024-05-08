@@ -7,16 +7,15 @@
     </div>
     <form #loginForm="ngForm">
       <div class="px-5 pb-5">
-        <input placeholder="Login" type="text" name="login" required
-          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
-        <input placeholder="Password" type="password" name="password" required
-          class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+        <input placeholder="Login" type="text" name="username" ngModel required
+          class="text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200 focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+        <input placeholder="Password" type="password" name="password" ngModel required
+          class="text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200 focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
       </div>
       <hr class="mt-4">
       <div class="flex justify-center p-3">
         <div class="flex-initial">
-          <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-gray-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out
-            disabled:bg-slate-200 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none" disabled>
+          <button type="button" (click)="login(loginForm.value)" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize bg-gray-500 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-900 transition duration-300 transform active:scale-95 ease-in-out disabled:bg-slate-200 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none">
             Login
           </button>
         </div>
@@ -27,7 +26,7 @@
 
 <div class="divider">OR</div>
 
-<div>
+<!-- <div>
   <div class="bg-white rounded-lg shadow">
     <div class="flex">
       <div class="flex-1 py-5 pl-5">
@@ -89,4 +88,4 @@
       </div>
     </form>
   </div>
-</div>
+</div> -->

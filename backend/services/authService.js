@@ -6,13 +6,12 @@ const userRepository = require('../data/repositories/userRepository');
 
 async function login(username, password) {
     const user = await userRepository.findByUsername(username);
-    if (!user) {
-        throw new Error('User not found');
-    }
-
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    if (!isPasswordValid) {
-        throw new Error('Invalid password');
+
+    if (!user || !isPasswordValid) {
+        const error = new Error('Invalid login or password');
+        error.status = 401;
+        throw error;
     }
 
     const token = jwt.sign({ userId: user.id }, 'your-secret-key', { expiresIn: '1h' });
