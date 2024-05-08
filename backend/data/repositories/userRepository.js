@@ -10,9 +10,9 @@ function getAll() {
   return JSON.parse(usersData);
 }
 
-function findByUsername(username) {
+function findByLogin(login) {
   const users = getAll();
-  return users.find(user => user.username === username);
+  return users.find(user => user.login === login);
 }
 
 function findById(id) {
@@ -20,13 +20,26 @@ function findById(id) {
   return users.find(user => user.id === id);
 }
 
-function create(username, email, password) {
+function findByEmail(email) {
+  const users = getAll();
+  return users.find(user => user.email === email);
+}
+
+function create(nom, prenom, adresse, ville, codePostal, telephone, email, civilite, login, hashedPassword, pays) {
   const users = getAll();
   const newUser = {
     id: users.length + 1,
-    username,
+    nom,
+    prenom,
+    adresse,
+    ville,
+    codePostal,
+    telephone,
     email,
-    password,
+    civilite,
+    login,
+    password: hashedPassword,
+    pays,
   };
   users.push(newUser);
   fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
@@ -35,7 +48,8 @@ function create(username, email, password) {
 
 module.exports = {
   getAll,
-  findByUsername,
+  findByLogin,
+  findByEmail,
   findById,
   create,
 };

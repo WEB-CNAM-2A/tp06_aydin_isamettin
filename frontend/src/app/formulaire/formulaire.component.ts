@@ -33,37 +33,22 @@ export class FormulaireComponent {
         }
       );
   }
+  
+  register(registerData: any) {
+    console.log(registerData);
 
-  // nom = '';
-  // prenom = '';
-  // adresse = '';
-  // codePostal = '';
-  // ville = '';
-  // telephone = '';
-  // email = '';
-  // civilite = '';
-  // password = '';
-  // login = '';
-  // pays = '';
-  // isHidden = true;
-  
-  // @Output() submit = new EventEmitter<any>();
-  
-  // sendParent() {
-  //   console.log('sendParent');
-  //   this.submit.emit({
-  //     nom: this.nom,
-  //     prenom: this.prenom,
-  //     adresse: this.adresse,
-  //     codePostal: this.codePostal,
-  //     ville: this.ville,
-  //     telephone: this.telephone,
-  //     email: this.email,
-  //     civilite: this.civilite,
-  //     password: this.password,
-  //     login: this.login,
-  //     pays: this.pays,
-  //     isHidden: false
-  //   });
-  // }
+    this.http.post<any>(`${environment.backendClient}/auth/register`, registerData)
+      .subscribe(
+        response => {
+          // Handle successful register response
+          console.log('Register successful', response);
+          this.LoginService.setJwtToken(response.token);
+          this.router.navigate(['/profile'])
+        },
+        error => {
+          // Handle register error
+          console.error('Register failed', error);
+        }
+      );
+  }
 }

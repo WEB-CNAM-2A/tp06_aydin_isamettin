@@ -1,22 +1,30 @@
 [
   {
     "id": 1,
-    "username": "user1",
-    "email": "user1@example.com",
-    "password": "$2b$10$KiRnBqaxufxs0pyal83Kt.3UkFDDa3awOoJAwOVMeLUDUHmRGmvFi",
-    "_comment": "password is 'password'"
+    "nom": "test",
+    "prenom": "test",
+    "adresse": "test",
+    "ville": "test",
+    "codePostal": -1,
+    "telephone": 1,
+    "email": "test",
+    "civilite": "Mr",
+    "login": "test",
+    "password": "$2b$10$6iTl3YW57rUeqFgCB0QpFOR6sQZOkjXaR..l8Xm1PDcR9jRie/yUS",
+    "pays": "test"
   },
   {
     "id": 2,
-    "username": "user2",
-    "email": "user2@example.com",
-    "password": "$2b$10$AZfvkiOo/9bGezDucVthW.TidesgBaZNKrtxeqOjsROvSwXuDSvWe",
-    "_comment": "password is 'password123'"
-  },
-  {
-    "id": 3,
-    "username": "user3",
-    "email": "my@email.com",
-    "password": "$2b$10$mWoEz1Enm80IEgZyWos18e07dXkh0iuzDsUSKQ4MvzjMNGu9BCc9e"
+    "nom": "test02",
+    "prenom": "test02",
+    "adresse": "test02",
+    "ville": "test02",
+    "codePostal": 1,
+    "telephone": 1,
+    "email": "test02",
+    "civilite": "Mr",
+    "login": "test02",
+    "password": "$2b$10$ex30.9Q/4q2q67h5oF66JeOX0m/zS9Qa4/Ea.sRkmgz3sJvx9/8je",
+    "pays": "test02"
   }
 ]

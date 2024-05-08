@@ -17,7 +17,7 @@ import { AsyncPipe } from '@angular/common';
 export class TetiereComponent implements OnInit {
   jwtToken: string | null = null;
 
-  constructor(private authService: LoginService) { }
+  constructor(private authService: LoginService, private router:Router) { }
 
   ngOnInit(): void {
     this.authService.jwtToken$.subscribe(token => {
@@ -28,6 +28,7 @@ export class TetiereComponent implements OnInit {
 
   logout(): void {
     this.authService.setJwtToken(null);
+    this.router.navigate(['/formulaire']);
   }
 
   @Select(CartItemState.getNbContacts) nb$?: Observable<number>;
