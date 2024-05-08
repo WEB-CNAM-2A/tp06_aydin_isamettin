@@ -16,7 +16,7 @@
                         <a routerLink="/">Home</a>
                     </li>
                     <li>
-                        <a routerLink="/products" >Products</a>
+                        <a routerLink="/products">Products</a>
                     </li>
                     <li>
                         <a routerLink="/cards">Cards</a>
@@ -66,8 +66,9 @@
                             <span class="text-md">Subtotal: ${{ price$ | async }}</span>
                             <div class="card-actions flex justify-center">
                                 <button routerLink="/cart"
-                                class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-gray-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
-                                View Cart</button>                            </div>
+                                    class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-gray-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
+                                    View Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +79,22 @@
                 <a class="btn btn-ghost" routerLink="/recapitulatif">Sign Up</a>
             </div>
         </div>
+
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img alt="Tailwind CSS Navbar component"
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a routerLink="/profile">Profile</a></li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+            </ul>
+        </div>
     </div>
-    
+
+
 </div>
 <div class="divider divider-vertical pb-16 pl-3 pr-3"></div>

@@ -5,6 +5,7 @@ import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component'
 import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
 import { CardComponent } from './card-module/card/card.component';
 import { CartMenuComponent } from './cart-menu/cart-menu.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'products', component: ProductCatalogComponent},
     { path: 'cards', component: CardComponent},
-    { path: 'cart', component: CartMenuComponent}
+    { path: 'cart', component: CartMenuComponent},
+    { path: 'profile', component: ProfilePageComponent}
 ];
