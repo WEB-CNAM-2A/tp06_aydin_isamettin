@@ -13,7 +13,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(environment.backendClient).pipe(
+    return this.http.get<Product[]>(`${environment.backendClient}/products`).pipe(
       catchError(error => {
         console.error('Error fetching products:', error);
         return throwError('Error fetching products');
