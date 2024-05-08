@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "email": "user1@example.com",
+    "password": "$2b$10$KiRnBqaxufxs0pyal83Kt.3UkFDDa3awOoJAwOVMeLUDUHmRGmvFi",
+    "_comment": "password is 'password'"
+  },
+  {
+    "id": 2,
+    "username": "user2",
+    "email": "user2@example.com",
+    "password": "$2b$10$AZfvkiOo/9bGezDucVthW.TidesgBaZNKrtxeqOjsROvSwXuDSvWe",
+    "_comment": "password is 'password123'"
+  },
+  {
+    "id": 3,
+    "username": "user3",
+    "email": "my@email.com",
+    "password": "$2b$10$mWoEz1Enm80IEgZyWos18e07dXkh0iuzDsUSKQ4MvzjMNGu9BCc9e"
+  }
+]
