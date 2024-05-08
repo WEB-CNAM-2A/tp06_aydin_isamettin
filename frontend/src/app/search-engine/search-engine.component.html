@@ -1,0 +1,69 @@
+<div tabindex="0" class="rounded-xl mb-12 collapse collapse-arrow border border-gray-200 bg-gray-200">
+  <input type="checkbox" />
+
+  <div class="collapse-title text-xl font-medium">
+    Click to see filters
+  </div>
+  <div class="collapse-content">
+    <div class="flex flex-col">
+      <div class="rounded-xl border border-gray-200 bg-gray-200 p-6 ">
+        <form #signupForm="ngForm">
+
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div class="flex flex-col">
+              <label for="name" class="text-sm font-medium text-stone-600">Name</label>
+              <input type="text" id="name" placeholder="Russet Gold Rush" [(ngModel)]="title" name="title"
+                class="mt-2 block w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50" />
+            </div>
+
+            <div class="flex flex-col">
+              <label for="origin" class="text-sm font-medium text-stone-600">Origin</label>
+
+              <select id="origin" [(ngModel)]="origin" name="origin"
+                class="mt-2 block w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
+                <option value="" selected>All</option>
+                <option>France</option>
+                <option>Spain</option>
+                <option>Ireland</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="size" class="text-sm font-medium text-stone-600">Size</label>
+
+              <select id="size" [(ngModel)]="size" name="size"
+                class="mt-2 block w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
+                <option value="" selected>All</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Big</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="type" class="text-sm font-medium text-stone-600">Type</label>
+
+              <select id="type" [(ngModel)]="type" name="type"
+                class="mt-2 block w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
+                <option value="" selected>All</option>
+                <option>White</option>
+                <option>Red</option>
+                <option>Gold</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-6 grid w-full grid-cols-2 justify-end space-x-4 md:flex">
+            <button (click)="reset()"
+              class="rounded-md bg-gray-200 px-8 py-2 font-medium text-gray-700 outline-none hover:opacity-80 focus:ring">Reset</button>
+            <button (click)="search()" type="submit"
+              class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-gray-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out
+                      disabled:bg-slate-200 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

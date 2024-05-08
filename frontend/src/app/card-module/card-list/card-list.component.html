@@ -1,0 +1,33 @@
+<div>
+    <div class="bg-white rounded-lg shadow">
+      <div class="flex">
+        <div class="flex-1 py-5 pl-5">
+          <h1 class="text-2xl font-semibold">Saved Cards</h1>
+        </div>
+      </div>
+        <div class="px-5 pb-5" *ngFor="let card of cardList">
+          <div class="flex">
+            <div class="flex-grow w-2/10 pr-1">
+              <input placeholder="Empty" type="text" [value]="card.Nom" disabled
+                required
+                class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+            </div>
+            <div class="flex-grow w-4/6 pl-1 pr-1">
+              <input placeholder="Empty" type="text" [value]="card.Code" disabled
+                required
+                class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+            </div>
+            <div class="flex-grow w-2/6 pl-1">
+              <input placeholder="Empty" type="number" [value]="card.CCV" disabled
+                required
+                class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+            </div>
+            <div class="flex-grow w-2/6 pl-1">
+              <input placeholder="Empty" type="date" [value]="card.Date" disabled
+                required
+                class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-gray-500 focus:bg-white dark:focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Russet Gold Rush",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 10,
+    "origin": "France",
+    "size": "Medium",
+    "type": "Gold"
+  },
+  {
+    "title": "Creamy Yukon Delights",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 12,
+    "origin": "Spain",
+    "size": "Small",
+    "type": "White"
+  },
+  {
+    "title": "Red Bliss Marvels",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 14,
+    "origin": "Ireland",
+    "size": "Big",
+    "type": "Red"
+  },
+  {
+    "title": "All-Star Idaho Gems",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 12,
+    "origin": "France",
+    "size": "Big",
+    "type": "White"
+  },
+  {
+    "title": "Petite Peruvian Pearls",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 15,
+    "origin": "Spain",
+    "size": "Medium",
+    "type": "Gold"
+  },
+  {
+    "title": "Purple Majesty Wonders",
+    "image": "https://images.squarespace-cdn.com/content/v1/5b5b5824f2e6b10639fdaf09/a277eae9-bf1a-4e66-9daf-dd2e60209073/Produce+Storage+Tips+icons+%289%29.png",
+    "price": 14,
+    "origin": "Ireland",
+    "size": "Small",
+    "type": "White"
+  }
+]

@@ -1,0 +1,42 @@
+<style>
+    @layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+</style>
+
+<div class="container mx-auto max-w-screen-lg px-5">
+  <div>
+    <div class="p-4 mx-auto lg:max-w-6xl max-w-xl md:max-w-full">
+      <h2 class="text-4xl font-bold text-gray-700 mb-12">Your Cart</h2>
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+      <div class="rounded-lg md:w-2/3">
+
+        @for (product of products$ | async; track product.title) {
+          <app-cart-menu-item [product]="product"></app-cart-menu-item>
+          }
+
+      </div>
+      <!-- Sub total -->
+      <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+        <div class="mb-2 flex justify-between">
+          <p class="text-gray-700">Subtotal</p>
+          <p class="text-gray-700">${{ price$ | async }}</p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between">
+          <p class="text-lg font-bold">Total</p>
+          <div class="">
+            <p class="mb-1 text-lg font-bold">${{ price$ | async }} USD</p>
+            <p class="text-sm text-gray-700">including VAT</p>
+          </div>
+        </div>
+        <button class="mt-6 w-full px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-gray-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">Check out</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
