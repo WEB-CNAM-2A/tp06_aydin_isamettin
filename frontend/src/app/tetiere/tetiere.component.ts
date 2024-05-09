@@ -28,7 +28,7 @@ export class TetiereComponent implements OnInit {
 
   logout(): void {
     this.authService.setJwtToken(null);
-    this.router.navigate(['/formulaire']);
+    this.router.navigate(['/recapitulatif']);
   }
 
   @Select(CartItemState.getNbContacts) nb$?: Observable<number>;
